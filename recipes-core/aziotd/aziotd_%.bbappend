@@ -7,5 +7,5 @@ export BINDGEN_EXTRA_CLANG_ARGS
 
 # Copy keys.generated.rs
 do_compile:prepend () {
-    install -m 644 ${WORKDIR}/keys.generated.rs ${WORKDIR}/git/key/aziot-keyd/src/keys.generated.rs
+    install -m 644 ${THISDIR}/files/keys.generated.rs ${WORKDIR}/git/key/aziot-keyd/src/keys.generated.rs
 }

@@ -27,13 +27,13 @@ do_install:append () {
     install -d -m 755 -o iotedge -g iotedge ${D}${localstatedir}/lib/aziot/edged
 
     install -d ${D}${systemd_unitdir}/system
-    install -m 644 ${WORKDIR}/aziot-edged.service ${D}${systemd_unitdir}/system
+    install -m 644 ${THISDIR}/files/aziot-edged.service ${D}${systemd_unitdir}/system
     install -m 644 ${WORKDIR}/git/edgelet/contrib/systemd/debian/aziot-edged.workload.socket ${D}${systemd_unitdir}/system
     install -m 644 ${WORKDIR}/git/edgelet/contrib/systemd/debian/aziot-edged.mgmt.socket ${D}${systemd_unitdir}/system
 
     #Creates /var/run/iotedge as 755, iotedge:iotedge via systemd-tmpfiles.setup.service
     install -d ${D}${sysconfdir}/tmpfiles.d
-    install -m 644 ${WORKDIR}/iotedge.conf ${D}${sysconfdir}/tmpfiles.d/iotedge.conf
+    install -m 644 ${THISDIR}/files/iotedge.conf ${D}${sysconfdir}/tmpfiles.d/iotedge.conf
 }
 
 inherit useradd

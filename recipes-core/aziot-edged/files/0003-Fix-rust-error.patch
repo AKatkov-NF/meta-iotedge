@@ -1,0 +1,24 @@
+From 5f6d6e7ff7fafab3280c464736fede4dc9d853be Mon Sep 17 00:00:00 2001
+From: Arteom Katkov <akatkov@nilfisk.com>
+Date: Fri, 21 Mar 2025 18:29:59 -0500
+Subject: [PATCH] Fix rust error
+
+---
+ edgelet/docker-rs/src/lib.rs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/edgelet/docker-rs/src/lib.rs b/edgelet/docker-rs/src/lib.rs
+index abbb42d94d..7889d281df 100644
+--- a/edgelet/docker-rs/src/lib.rs
++++ b/edgelet/docker-rs/src/lib.rs
+@@ -1,6 +1,6 @@
+ // Copyright (c) Microsoft. All rights reserved.
+ 
+-#![deny(rust_2018_idioms, warnings)]
++#![deny(rust_2018_idioms)]
+ #![allow(
+     dead_code,
+     non_snake_case,
+-- 
+2.34.1
+

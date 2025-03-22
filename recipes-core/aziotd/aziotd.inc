@@ -52,10 +52,10 @@ do_install:append  () {
 
 
     # Install all required services
-    install -m 644 ${WORKDIR}/aziot-certd.service ${D}${systemd_unitdir}/system
-    install -m 644 ${WORKDIR}/aziot-identityd.service ${D}${systemd_unitdir}/system
-    install -m 644 ${WORKDIR}/aziot-keyd.service ${D}${systemd_unitdir}/system
-    install -m 644 ${WORKDIR}/aziot-tpmd.service ${D}${systemd_unitdir}/system
+    install -m 644 ${THISDIR}/files/aziot-certd.service ${D}${systemd_unitdir}/system
+    install -m 644 ${THISDIR}/files/aziot-identityd.service ${D}${systemd_unitdir}/system
+    install -m 644 ${THISDIR}/files/aziot-keyd.service ${D}${systemd_unitdir}/system
+    install -m 644 ${THISDIR}/files/aziot-tpmd.service ${D}${systemd_unitdir}/system
 
     install -m 644 ${WORKDIR}/git/cert/aziot-certd/aziot-certd.socket.in ${D}${systemd_unitdir}/system/aziot-certd.socket
     install -m 644 ${WORKDIR}/git/identity/aziot-identityd/aziot-identityd.socket.in ${D}${systemd_unitdir}/system/aziot-identityd.socket

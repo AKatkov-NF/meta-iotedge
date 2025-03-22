@@ -2,6 +2,11 @@
 #
 inherit cargo
 
+ERROR_QA:remove = "patch-status"
+WARN_QA:append = " patch-status"
+
+CARGO_INSTALL_LIBRARIES = "1"
+
 # If this is git based prefer versioned ones if they exist
 # DEFAULT_PREFERENCE = "-1"
 
