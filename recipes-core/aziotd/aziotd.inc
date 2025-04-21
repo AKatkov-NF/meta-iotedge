@@ -84,11 +84,11 @@ GROUPADD_PARAM:${PN} += "-r aziotks; "
 GROUPADD_PARAM:${PN} += "-r aziotid; "
 GROUPADD_PARAM:${PN} += "-r aziottpm; "
 
-export SOCKET_DIR="/run/aziot"
-export USER_AZIOTID="aziotid"
-export USER_AZIOTCS="aziotcs"
-export USER_AZIOTKS="aziotks"
-export USER_AZIOTTPM="aziottpm"
+export SOCKET_DIR = "/run/aziot"
+export USER_AZIOTID = "aziotid"
+export USER_AZIOTCS = "aziotcs"
+export USER_AZIOTKS = "aziotks"
+export USER_AZIOTTPM = "aziottpm"
 
 RUSTFLAGS += "-Clink-arg=-Wl,-rpath,${libdir}/rustlib/${RUST_HOST_SYS}/lib"
 FILES:${PN} += " \
