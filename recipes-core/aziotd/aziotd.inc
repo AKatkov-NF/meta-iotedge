@@ -8,11 +8,13 @@ SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 SYSTEMD_SERVICE:${PN} = "aziot-certd.service "
 SYSTEMD_SERVICE:${PN} += "aziot-identityd.service "
 SYSTEMD_SERVICE:${PN} += "aziot-keyd.service "
+SYSTEMD_SERVICE:${PN} += "aziot-tpmd.service "
 
 SRC_URI += "file://aziot-certd.service \
             file://aziot-identityd.service \
             file://aziot-keyd.service \
             file://keys.generated.rs \
+            file://aziot-tpmd.service \
             file://0001-Remove-panic.patch \
 "
 
